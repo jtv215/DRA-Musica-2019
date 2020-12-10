@@ -1,0 +1,23 @@
+<h1>Detalle de la canción</h1>
+<hr/>
+<br>
+<div *ngIf="cancion">
+    <div class="col-lg-3" *ngIf="cancion.imagen">
+        <img src="{{cancion.imagen}}" class="imagenCancion" style="margin-bottom: 20px"/>
+        
+    </div>
+    <div class="col-lg-9">
+        <h3>{{cancion.titulo}}</h3> 
+        <p>
+            <Strong>{{cancion.titulo}}</Strong> - 
+            <Strong>{{cancion.artista}}</Strong>
+        </p>
+        <p>
+            Posición: <label>{{cancion.posiccionCancion}}</label>
+            <p>
+            <a [routerLink]="['/canciones']" class="btn btn-sm btn-lg btn-primary" style="margin-right: 5px">Volver</a>
+       
+        </p>
+    </div>
+  
+</div>

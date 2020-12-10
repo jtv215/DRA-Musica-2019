@@ -1,0 +1,44 @@
+<h2>{{title}}</h2>
+<hr/>
+
+<form #formCancion="ngForm"  (ngSubmit)="onSubmit()" class="col-lg-6" id="form-Cancion">
+
+<div class="form-group">
+
+    <label>Posición Cancion:
+        <span *ngIf="!posiccionCancion.valid && posiccionCancion.touched" class= "label label-danger">
+            La posición es Obligatoria o introduce un número
+        </span>
+    </label>
+    <input type="text" class="form-control" name="posiccionCancion" #posiccionCancion="ngModel" [(ngModel)]="cancion.posiccionCancion" required
+    pattern="[0-9]+">
+
+
+
+    <label>Título:
+    <span *ngIf="!titulo.valid && titulo.touched" class= "label label-danger">
+            El Título es Obligatorio
+        </span></label>
+    <input type="text" class="form-control"  name="titulo" #titulo="ngModel" [(ngModel)]="cancion.titulo" required>
+
+
+
+
+    <label>Artista:
+    <span *ngIf="!artista.valid && artista.touched" class= "label label-danger">
+            El artista es Obligatorio
+        </span></label>
+    <input type="text" class="form-control"  name="artista" #artista="ngModel" [(ngModel)]="cancion.artista" required>
+
+
+    <label>Imagen URL:
+      <span *ngIf="!imagen.valid && imagen.touched" class= "label label-danger">
+            La imagen es Obligatoria
+        </span></label>
+    <input type="text" class="form-control"  name="imagen"   #imagen="ngModel" [(ngModel)]="cancion.imagen" >
+
+<p></p>
+
+<input type="submit"  class="btn btn-success" value={{title}} [disabled]=!formCancion.form.valid >
+</div>
+</form>

@@ -1,0 +1,14 @@
+FROM python:3.6
+
+ADD leerDatos.py /
+
+RUN pip install BeautifulSoup4
+RUN pip install html5lib
+RUN pip install requests
+RUN pip install urllib3
+
+CMD ["python", "./leerDatos.py"]
+
+
+
+

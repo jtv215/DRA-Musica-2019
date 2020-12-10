@@ -1,0 +1,32 @@
+version: "3.3"
+services:
+  postgreSQL:
+    restart: always
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
+
+  rest:
+    build: rest
+    restart: always
+    depends_on: 
+      - postgreSQL
+    ports:
+      - "8080:8080"
+  
+  proyectoangular:
+    build: proyectoangular
+    restart: always
+    ports: 
+      - "4200:4200"
+    command: > 
+        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+ 
+    
+
+ 
+    

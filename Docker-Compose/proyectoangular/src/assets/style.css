@@ -1,0 +1,86 @@
+#body{
+    background-image:url('https://image.freepik.com/foto-gratis/pared-estuco-liso_1194-7087.jpg');
+    background-repeat: 'no-repeat';
+
+}
+
+
+#content{
+    margin-top: 30px;
+    border:1px solid #000;
+    border-radius: 2px;
+    padding: 0px;
+
+
+}
+
+#header{
+    /*background: #000;*/
+    color: white;
+    height: 100px;
+    line-height: 100px;
+    background-image:url('http://festivalibericobadajoz.es/web/wp-content/uploads/2016/04/cabecerabuena.jpg');
+
+}
+
+#header h1{
+    display: block;
+    font-weight: bold;
+}
+
+#nav{
+    padding: 0px;
+    margin: 0px;
+    background: #db021b;   
+    height: 35px;
+  
+}
+
+#nav ul{
+    list-style: none;
+ 
+}
+#nav ul li {
+    float: left;
+    margin-right: 25px;
+
+}
+#nav ul li a{
+    color: #fff;
+    font-size: 23px;
+    transition: all 300ms;
+
+}
+#nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(175, 173, 30);
+
+}
+
+
+
+#main .jumbotron{
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.imagenRelleno{
+    background: #ccc;
+    width: 100%;
+    height: 200px;
+}
+
+.imagenCancion{
+    width: 100%;
+    height: 200px;
+}
+
+.caption h3{
+    font-size: 11px;
+    font-weight: bold;
+    
+}
+.caption a{
+    margin-right: 5px;
+    
+}
